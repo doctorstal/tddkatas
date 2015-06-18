@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="unittests">
     <configurations>
-      <configuration name="tddkatas" pure-as="true" main-class="Tddkatas" output-file="Tddkatas.swf" output-folder="$MODULE_DIR$/out/production/tddkatas" use-html-wrapper="true" wrapper-template-path="$MODULE_DIR$/html-template">
+      <configuration name="tddkatas" pure-as="true" main-class="com.ds.katas.Tddkatas" output-file="Tddkatas.swf" output-folder="$MODULE_DIR$/out/production/tddkatas" use-html-wrapper="true" wrapper-template-path="$MODULE_DIR$/html-template">
         <dependencies target-player="11.1">
           <sdk name="flexsdk4.6" />
         </dependencies>
@@ -21,6 +21,9 @@
               <dependency linkage="Merged" />
             </entry>
             <entry library-name="greensock" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Core" library-level="application">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -42,9 +45,10 @@
     </content>
     <orderEntry type="jdk" jdkName="flexsdk4.6" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="flexunit-4.1.0-8-as3_4.1.0.16076" level="application" />
-    <orderEntry type="library" name="puremvc" level="application" />
-    <orderEntry type="library" name="greensock" level="application" />
+    <orderEntry type="library" exported="" name="flexunit-4.1.0-8-as3_4.1.0.16076" level="application" />
+    <orderEntry type="library" exported="" name="puremvc" level="application" />
+    <orderEntry type="library" exported="" name="greensock" level="application" />
+    <orderEntry type="library" exported="" name="Core" level="application" />
   </component>
 </module>
 

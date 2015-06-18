@@ -1,4 +1,4 @@
-package {
+package com.ds.katas {
 
 import flash.display.Sprite;
 import flash.text.TextField;
