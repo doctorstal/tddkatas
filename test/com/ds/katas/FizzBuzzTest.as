@@ -62,6 +62,17 @@ package com.ds.katas
 		}
 
 
+		[Test(expects="ArgumentError")]
+		public function testOutOfBoundsException():void
+		{
+			_fizzBuzz.getSingleOutput(0);
+		}
+		[Test(expects="ArgumentError")]
+		public function testOutOfBoundsException2():void
+		{
+			_fizzBuzz.getSingleOutput(101);
+		}
+
 		[Test]
 		public function testOutput():void
 		{

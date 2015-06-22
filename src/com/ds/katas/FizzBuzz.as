@@ -15,6 +15,7 @@ package com.ds.katas
 
 		public function getSingleOutput(num:int):String
 		{
+			checkForBounds(num);
 			var res:String = "";
 			var isFizz:Boolean = num % 3 == 0;
 			var isBuzz:Boolean = num % 5 == 0;
@@ -32,6 +33,14 @@ package com.ds.katas
 				res = String(num);
 			}
 			return res;
+		}
+
+		private function checkForBounds(num:int):void
+		{
+			if(num <= 0 || num > 100)
+			{
+				throw ArgumentError("Please, use numbers from 1 to 100 only!");
+			}
 		}
 
 		public function getOutput():String
