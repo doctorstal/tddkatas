@@ -21,4 +21,29 @@ describe("String split", function() {
         expect('222'.split(',').length).toBe(1);
         expect('222'.split(',')[0]).toBe('222');
     })
+});
+
+describe("Step2. Unknown amount of numbers.", function() {
+    it("Three numbers", function() {
+        expect(add('1,1,1')).toBe(3);
+    });
+
+    it("Four numbers", function() {
+        expect(add('1,2,3,4')).toBe(10);
+    });
+
+    it("Random nubmers", function() {
+        var rand = Math.floor(Math.random() * 10);
+        var sum = 0;
+        var arr = [];
+        for (var i = 0; i < rand; i++) {
+            var n = Math.floor(Math.random() * 100);
+            sum += n;
+            arr[i] = n;
+        }
+
+        expect(add(arr.join(','))).toBe(sum);
+
+    })
+
 })

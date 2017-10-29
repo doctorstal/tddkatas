@@ -6,7 +6,7 @@ function add(numbers) {
 
 function addNumbers(numbers) {
     var arr = numbers.split(',');
-    var res = parseInt(arr[0]);
-    if (arr.length == 2) res += parseInt(arr[1]);
-    return res;
+    return arr.reduce(function(prev, curr) {
+        return prev + parseInt(curr);
+    }, 0);
 }
