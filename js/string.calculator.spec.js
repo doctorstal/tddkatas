@@ -56,3 +56,32 @@ describe("Step three. Newline or comma as a delimeter", function() {
         expect(add('2\n1,3')).toBe(6)
     })
 })
+
+describe("Step four. Custom delimeter", function() {
+    it("Should assept custom delimeter formatted string.", function() {
+        expect(add('//;\n1;2')).toBe(3);
+        expect(add('//plus\n59plus2plus5')).toBe(66);
+    })
+})
+
+describe("Regexp test", function() {
+    var regexp = /(^\/\/(.*)\n)?([\s\S]*)$/;
+    it("Get the token", function() {
+        expect('//token\n'.match(/^\/\/(.*)\n/)[1]).toBe('token');
+    })
+    it("Not get the token", function() {
+        expect('1,3,4\n'.match(/^\/\/(.*)\n/)).toBeNull();
+    })
+    it("Get token and string", function() {
+        var match = '//plus\n1plus2'.match(regexp);
+        expect(match[2]).toBe('plus');
+        expect(match[3]).toBe('1plus2');
+    })
+
+    it("Get string without token", function() {
+        var match = '1,2\n3'.match(regexp);
+        expect(match[2]).toBeFalsy();
+        expect(match[3]).toBe('1,2\n3');
+    })
+
+})
