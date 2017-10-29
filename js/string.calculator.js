@@ -5,9 +5,8 @@ function add(numbers) {
 }
 
 function addNumbers(numbers) {
-    if (numbers.indexOf(',') == -1) {
-        return parseInt(numbers);
-    }
     var arr = numbers.split(',');
-    return parseInt(arr[0]) + parseInt(arr[1]);
+    var res = parseInt(arr[0]);
+    if (arr.length == 2) res += parseInt(arr[1]);
+    return res;
 }

@@ -15,3 +15,10 @@ describe("String calculator. Simplest test case.", function() {
     });
 
 })
+
+describe("String split", function() {
+    it("Should return arr with one value on split", function() {
+        expect('222'.split(',').length).toBe(1);
+        expect('222'.split(',')[0]).toBe('222');
+    })
+})
