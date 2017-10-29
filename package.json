@@ -1,0 +1,25 @@
+{
+  "name": "tddkatas",
+  "version": "1.0.0",
+  "description": "TDD Katas. Name says itself. We try to master TDD here. Serous business.",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctorstal/tddkatas.git"
+  },
+  "author": "Stadnyk Oleksii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doctorstal/tddkatas/issues"
+  },
+  "homepage": "https://github.com/doctorstal/tddkatas#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
