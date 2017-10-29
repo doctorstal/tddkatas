@@ -47,3 +47,12 @@ describe("Step2. Unknown amount of numbers.", function() {
     })
 
 })
+
+describe("Step three. Newline or comma as a delimeter", function() {
+    it("Should assept newline as a delimeter", function() {
+        expect(add('1\n19')).toBe(20);
+    })
+    it("Should assep newline and comma as a delimeter", function() {
+        expect(add('2\n1,3')).toBe(6)
+    })
+})
