@@ -5,8 +5,7 @@ function add(numbers) {
 
     function extractNumbers(numString) {
         var dnl = extractDelimeterAndLine(numString);
-        return dnl.line.length && dnl.line.split(dnl.delimeter) ||
-            [0];
+        return (dnl.line.length == 0) ? [0] : dnl.line.split(dnl.delimeter);
     }
 
     function checkArray(numArray) {
