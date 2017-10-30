@@ -19,4 +19,9 @@ describe("String calculator", function() {
         expect(add('1,2,3')).toBe(6);
         expect(add('3,4,0')).toBe(7);
     })
+
+    it("should accept newline as delimeter", function() {
+        expect(add('1,2\n3')).toBe(6);
+        expect(add('2\n3,1')).toBe(6);
+    })
 })
