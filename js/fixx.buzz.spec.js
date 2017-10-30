@@ -21,4 +21,9 @@ describe("FizzBuzz", function() {
         expect(fizzBuzz(30)).toBe('FizzBuzz');
     })
 
+    it("should throw for less than one", function() {
+        expect(fizzBuzz.bind(null, 0)).toThrow();
+        expect(fizzBuzz.bind(null, -1)).toThrow();
+    })
+
 })
