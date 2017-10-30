@@ -16,4 +16,9 @@ describe("FizzBuzz", function() {
         expect(fizzBuzz(25)).toBe('Buzz');
     })
 
+    it("should return FizzBuzz for dividable by 3 and 5", function() {
+        expect(fizzBuzz(15)).toBe('FizzBuzz');
+        expect(fizzBuzz(30)).toBe('FizzBuzz');
+    })
+
 })
