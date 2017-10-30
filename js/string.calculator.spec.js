@@ -24,4 +24,17 @@ describe("String calculator", function() {
         expect(add('1,2\n3')).toBe(6);
         expect(add('2\n3,1')).toBe(6);
     })
+
+    it("should support custom delimeter", function() {
+        expect(add('//;\n3;4;93')).toBe(100);
+        expect(add('//plus\n3plus4plus93')).toBe(100);
+    })
+})
+
+describe("Delimeter extractor", function() {
+    it("should extract delimeter", function() {
+        expect(extractDelimeterAndLine('//;\n3;4')).toEqual({ delimeter: ';', line: '3;4' });
+        expect(extractDelimeterAndLine('//plus\n3plus4')).toEqual({ delimeter: 'plus', line: '3plus4' });
+        expect(extractDelimeterAndLine('3\n4,5')).toEqual({ delimeter: /,|\n/, line: '3\n4,5' });
+    })
 })
