@@ -2,9 +2,10 @@ function add(numbers) {
     if (numbers == '') return 0;
 
     var nArr = numbers.split(',');
-    if (nArr.length == 1) {
-        return parseInt(nArr[0]);
-    } else {
-        return parseInt(nArr[0]) + parseInt(nArr[1]);
+
+    var res = parseInt(nArr[0]);
+    if (nArr.length == 2) {
+        res += parseInt(nArr[1]);
     }
+    return res;
 }
