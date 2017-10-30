@@ -1,13 +1,12 @@
 function add(numbers) {
-    if (numbers == '') return 0;
+    var numArray = extractNumbers(numbers);
+    checkArray(numArray);
+    return calculateArraySum(numArray);
 
-    return calculateArraySum(extractNumbers(numbers));
-
-    function calculateArraySum(numArray) {
-        checkArray(numArray);
-        return numArray.reduce(function(prev, curr) {
-            return prev + parseInt(curr);
-        }, 0);
+    function extractNumbers(numString) {
+        var dnl = extractDelimeterAndLine(numString);
+        return dnl.line.length && dnl.line.split(dnl.delimeter) ||
+            [0];
     }
 
     function checkArray(numArray) {
@@ -15,10 +14,13 @@ function add(numbers) {
         if (negatives.length) throw new Error('Negatives are not allowed. [' + negatives.join(', ') + ']');
     }
 
-    function extractNumbers(numString) {
-        var dnl = extractDelimeterAndLine(numString);
-        return dnl.line.split(dnl.delimeter);
+    function calculateArraySum(numArray) {
+        return numArray.reduce(function(prev, curr) {
+            return prev + parseInt(curr);
+        }, 0);
     }
+
+
 }
 
 function extractDelimeterAndLine(numbers) {
