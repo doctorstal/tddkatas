@@ -29,6 +29,11 @@ describe("String calculator", function() {
         expect(add('//;\n3;4;93')).toBe(100);
         expect(add('//plus\n3plus4plus93')).toBe(100);
     })
+
+    it("should throw on negative numbers", function() {
+        expect(add.bind(null, '-1')).toThrowError('Negatives are not allowed. [-1]');
+        expect(add.bind(null, '-1,2,3,-5')).toThrowError('Negatives are not allowed. [-1, -5]');
+    })
 })
 
 describe("Delimeter extractor", function() {
