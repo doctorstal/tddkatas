@@ -3,9 +3,7 @@ function add(numbers) {
 
     var nArr = numbers.split(',');
 
-    var res = parseInt(nArr[0]);
-    if (nArr.length == 2) {
-        res += parseInt(nArr[1]);
-    }
-    return res;
+    return nArr.reduce(function(prev, curr) {
+        return prev + parseInt(curr);
+    }, 0);
 }

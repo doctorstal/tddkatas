@@ -14,4 +14,9 @@ describe("String calculator", function() {
         expect(add('1,2')).toBe(3);
         expect(add('0,166')).toBe(166);
     })
+
+    it("should return summ of three and more numbers", function() {
+        expect(add('1,2,3')).toBe(6);
+        expect(add('3,4,0')).toBe(7);
+    })
 })
