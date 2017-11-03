@@ -1,3 +1,3 @@
 function fizzBuzz(num) {
-    return String(num);
+    return (num % 3) ? String(num) : 'Fizz';
 }
