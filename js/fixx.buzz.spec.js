@@ -15,4 +15,9 @@ describe('FizzBuzz', function() {
         expect(fizzBuzz(10)).toBe('Buzz')
         expect(fizzBuzz(20)).toBe('Buzz')
     })
+
+    it('should return FizzBuzz for devisible by 3 and 5', function() {
+        expect(fizzBuzz(15)).toBe('FizzBuzz')
+        expect(fizzBuzz(30)).toBe('FizzBuzz')
+    })
 })
