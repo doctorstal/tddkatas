@@ -9,4 +9,17 @@ describe('FizzBuzz', function() {
         expect(fizzBuzz(33)).toEqual('Fizz');
         expect(fizzBuzz(66)).toEqual('Fizz');
     })
+
+    it('should return Buzz for devidable by 5', function() {
+        expect(fizzBuzz(5)).toEqual('Buzz');
+        expect(fizzBuzz(50)).toEqual('Buzz');
+        expect(fizzBuzz(25)).toEqual('Buzz');
+    })
+
+    it('should return FizzBuzz for devidable by 3 and 5', function() {
+        expect(fizzBuzz(15)).toEqual('FizzBuzz');
+        expect(fizzBuzz(30)).toEqual('FizzBuzz');
+        expect(fizzBuzz(45)).toEqual('FizzBuzz');
+    })
+
 });
